@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: rgb(72, 35, 81);
+        }
+        #loveCalculator{
+            background-color: rgb(34, 162, 217);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px black;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input{
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+            border-radius: 5px;
+            border: 1px rgb(56, 9, 9);
+        }
+        button{
+            padding: 10px;
+            background-color: rgb(166, 137, 179);
+            color: rgb(94, 13, 13);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            
+        }
+        #result{
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: black;
+
+        }
+         
+    </style>
+</head>
+<body>
+    
+    <div id="loveCalculator">
+        <h1>Love Calculator</h1>
+        <p>Enter the names to Calculate your love percentage</p>
+        <input type="text" id="yourname" placeholder="your name">
+        <input type="text" id="partnername" placeholder="your partner name">
+        <button onclick="calculatelove()">Calculate love</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        function calculatelove(){
+            const yourname=document.getElementById("yourname").value;
+            const partnername=document.getElementById("partnername").value;
+            if(yourname===''||partnername===''){
+                document.getElementById('result').textContent='please enter both names';
+            return;
+        }
+        const lovepercentage=Math.floor(Math.random()*51)+50;
+        document.getElementById('result').textContent=`${yourname} and ${partnername} have a ${lovepercentage}% love compatibility`;
+        }
+        </script>
+        
+</body>
+</html>

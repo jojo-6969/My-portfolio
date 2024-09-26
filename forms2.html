@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <title>forms</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    * {
+        padding: 0 50 0 50;
+
+        
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-size: small;
+    
+    
+    }
+
+    body {
+        background: rgba(219, 214, 214, 0.895);
+        align-items: center;
+    }
+
+    .wrapper {
+        margin-left: 180px;
+        height: auto;
+        width: 600px;
+        margin-top: 15px;
+        text-align: center;
+        background: white;
+        box-shadow: 50px;
+    }
+
+    input {
+        background-color: rgb(255, 255, 255);
+
+        border-radius: 6px;
+    }
+
+    label {
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+    <form id="myform" onsubmit="showAlert(event)">
+    
+</form>
+<script>
+    function showAlert(event){
+        event.preventDefault();
+        alert("for is submitted");
+    }
+</script>
+
+    <div class="wrapper">
+        <forms method="POST">
+            <ul>
+
+
+                <label>Username</label><br>
+                <input type="text" placeholder="enter your name"><br><br>
+                <label>password:</label><br>
+                <input type="password" placeholder="enter your password"><br><br>
+                <label>Email:</label><br>
+                <input type="email" placeholder="enter your email"><br><br>
+                <label>gender</label>
+                <input type="radio" name="gender">male
+                <input  type="radio" name="gender">female<br><br>
+                <label>intrests</label>
+            <input type="checkbox">html
+            <input type="checkbox">c
+            <input type="checkbox">c++<br><br>
+                <label>adress</label><br>
+                <textarea placeholder="write your adress"></textarea><br>
+                <label>country</label>
+                <select>
+                    <option>India</option>
+                    <option>america</option>
+                    <option>cannada</option>
+                    <option>dubai</option>
+                    <option>OHIO</option>
+                </select><br><br>
+                <label>state</label>
+                <select>
+                    <option>karnataka</option>
+                    <option>kerala</option>
+                    <option>andhra pradesh</option>
+                    <option>tamil nadu</option>
+                </select><br><br>
+                <button type="submit">SUBMIT</button>
+            </ul>
+        </forms>
+    </div>
+</body>
+</html>
+
+<form id="myform" onsubmit="showAlert(event)">
+    
+</form>
+<script>
+    function showAlert(event){
+        event.preventDefault();
+        alert("for is submitted");
+    }
+</script>
